@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="342px" preserveAspectRatio="none" style="width:350px;height:342px;background:#FFFFFF;" version="1.1" viewBox="0 0 350 342" width="350px" zoomAndPan="magnify"><defs><filter height="300%" id="fj123z7dcaipa" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fj123z7dcaipa)" height="46.2656" style="stroke:#000000;stroke-width:2.0;" width="326.5" x="10" y="134.4297"/><rect fill="#FFFFFF" filter="url(#fj123z7dcaipa)" height="46.2656" style="stroke:#000000;stroke-width:2.0;" width="326.5" x="10" y="194.6953"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="49" x2="49" y1="88.2969" y2="257.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="289.5" x2="289.5" y1="88.2969" y2="257.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="20" y="84.9951">Usuário</text><ellipse cx="49" cy="15" fill="#FEFECE" filter="url(#fj123z7dcaipa)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M49,23 L49,50 M36,31 L62,31 M49,50 L36,65 M49,50 L62,65 " fill="none" filter="url(#fj123z7dcaipa)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="20" y="269.9561">Usuário</text><ellipse cx="49" cy="283.2578" fill="#FEFECE" filter="url(#fj123z7dcaipa)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M49,291.2578 L49,318.2578 M36,299.2578 L62,299.2578 M49,318.2578 L36,333.2578 M49,318.2578 L62,333.2578 " fill="none" filter="url(#fj123z7dcaipa)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fj123z7dcaipa)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="69" x="253.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="260.5" y="72.9951">Sistema</text><rect fill="#FEFECE" filter="url(#fj123z7dcaipa)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="69" x="253.5" y="256.9609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="260.5" y="276.9561">Sistema</text><polygon fill="#A80036" points="278,115.4297,288,119.4297,278,123.4297,282,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="49" x2="284" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="189" x="56" y="114.3638">Envia os dados para cadastro</text><path d="M10,134.4297 L159,134.4297 L159,141.4297 L149,151.4297 L10,151.4297 L10,134.4297 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="46.2656" style="stroke:#000000;stroke-width:2.0;" width="326.5" x="10" y="134.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="104" x="25" y="147.4966">Dados válidos</text><polygon fill="#A80036" points="60,168.6953,50,172.6953,60,176.6953,56,172.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="54" x2="289" y1="172.6953" y2="172.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="66" y="167.6294">Retorna os dados cadastrados</text><path d="M10,194.6953 L172,194.6953 L172,201.6953 L162,211.6953 L10,211.6953 L10,194.6953 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="46.2656" style="stroke:#000000;stroke-width:2.0;" width="326.5" x="10" y="194.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="117" x="25" y="207.7622">Dados inválidos</text><polygon fill="#A80036" points="60,228.9609,50,232.9609,60,236.9609,56,232.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="54" x2="289" y1="232.9609" y2="232.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="66" y="227.895">Exibe a lista de erros de validação</text><!--MD5=[32de2fbdf1999ede6e4d14d9cddd6086]
+@startuml USU01
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para cadastro
+
+group Dados válidos
+  Sistema - -> Usuário: Retorna os dados cadastrados
+end
+
+group Dados inválidos
+  Sistema - -> Usuário: Exibe a lista de erros de validação
+end
+
+@enduml
+
+PlantUML version 1.2021.16(Wed Dec 08 14:25:22 BRT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

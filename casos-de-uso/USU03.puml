@@ -1,0 +1,20 @@
+@startuml USU03
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para alteração de senha
+
+group Dados válidos
+  Sistema --> Usuário: Retorna uma mensagem informando que a senha foi alterada
+end
+
+group Dados inválidos
+  Sistema --> Usuário: Exibe a lista de erros de validação
+end
+
+group Usuário não está logado
+  Sistema --> Usuário: Exibe um erro informando que o usuário não está logado
+end
+
+@enduml

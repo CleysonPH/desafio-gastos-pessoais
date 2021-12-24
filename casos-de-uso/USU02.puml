@@ -1,0 +1,20 @@
+@startuml USU02
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para atualização
+
+group Dados válidos
+  Sistema --> Usuário: Retorna os dados atualizados
+end
+
+group Dados inválidos
+  Sistema --> Usuário: Exibe a lista de erros de validação
+end
+
+group Usuário não está logado
+  Sistema --> Usuário: Exibe um erro informando que o usuário não está logado
+end
+
+@enduml
