@@ -1,0 +1,27 @@
+@startuml CON01
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para cadastro da conta
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Realiza a validação dos dados enviados
+
+  group Dados válidos
+    Sistema -> Sistema: Realiza o cadastro da conta
+    Sistema --> Usuário: Retorna os dados cadastrados
+  end
+
+  group Dados inválidos
+    Sistema --> Usuário: Exibe a lista de erros de validação
+  end
+end
+
+@enduml
