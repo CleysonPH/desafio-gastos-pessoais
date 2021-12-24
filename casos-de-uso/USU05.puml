@@ -1,0 +1,19 @@
+@startuml USU05
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia o refresh token
+
+Sistema -> Sistema: Realiza a validação do refresh token
+
+group Refresh token válido
+  Sistema -> Sistema: Realiza a autenticação do usuário
+  Sistema --> Usuário: Retorna o access token e o refresh token
+end
+
+group Refresh token inválido
+  Sistema --> Usuário: Exibe o erro no refresh token
+end
+
+@enduml

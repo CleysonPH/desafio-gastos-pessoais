@@ -1,0 +1,19 @@
+@startuml USU04
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia as credenciais para autenticação
+
+Sistema -> Sistema: Válida as credenciais enviadas
+
+group Credenciais corretas
+  Sistema -> Sistema: Realiza o processo de autenticação
+  Sistema --> Usuário: Retorna o access token e o refresh token
+end
+
+group Credenciais incorretas
+  Sistema --> Usuário: Exibe um erro de bad credentials
+end
+
+@enduml

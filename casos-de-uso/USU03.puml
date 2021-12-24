@@ -5,16 +5,20 @@ participant Sistema
 
 Usuário -> Sistema: Envia os dados para alteração de senha
 
-group Dados válidos
-  Sistema --> Usuário: Retorna uma mensagem informando que a senha foi alterada
-end
-
-group Dados inválidos
-  Sistema --> Usuário: Exibe a lista de erros de validação
-end
-
+Sistema -> Sistema: Verifica se o usuário está logado
 group Usuário não está logado
   Sistema --> Usuário: Exibe um erro informando que o usuário não está logado
+end
+
+group Usuário está logado
+  Sistema -> Sistema: Realiza a válidação dos dados enviados
+  group Dados válidos
+    Sistema --> Usuário: Retorna uma mensagem informando que a senha foi alterada
+  end
+
+  group Dados inválidos
+    Sistema --> Usuário: Exibe a lista de erros de validação
+  end
 end
 
 @enduml

@@ -5,7 +5,10 @@ participant Sistema
 
 Usuário -> Sistema: Envia os dados para cadastro
 
+Sistema -> Sistema: Realiza a validação dos dados enviados
+
 group Dados válidos
+  Sistema -> Sistema: Realiza o cadastro do usuário
   Sistema --> Usuário: Retorna os dados cadastrados
 end
 
