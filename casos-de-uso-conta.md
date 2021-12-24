@@ -3,7 +3,7 @@
 ## CON01 - Cadastrar conta
 
 ### Précondição
-Nenhuma
+Usuário deve estar logado
 
 ### Ator
 Usuário
