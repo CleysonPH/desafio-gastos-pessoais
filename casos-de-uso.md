@@ -61,10 +61,10 @@ Content-Type: application/json
 Accept: */*
 
 {
-	"nome_completo": "Cleyson Lima",
-	"username": "cleysonph",
-	"senha": "senha@123",
-	"confirmacao_senha": "senha@123"
+  "nome_completo": "Cleyson Lima",
+  "username": "cleysonph",
+  "senha": "senha@123",
+  "confirmacao_senha": "senha@123"
 }
 ```
 
@@ -77,11 +77,11 @@ HTTP/1.1 201
 Content-Type: application/json
 
 {
-	"id": 1,
-	"nome_completo": "Cleyson Lima",
-	"username": "cleysonph",
-	"criado_em": "2021-12-24T01:41:36.556174143",
-	"atualizado_em": "2021-12-24T01:41:36.556174143",
+  "id": 1,
+  "nome_completo": "Cleyson Lima",
+  "username": "cleysonph",
+  "criado_em": "2021-12-24T01:41:36.556174143",
+  "atualizado_em": "2021-12-24T01:41:36.556174143",
 }
 
 ```
@@ -93,20 +93,20 @@ HTTP/1.1 400
 Content-Type: application/json
 
 {
-	"status": 400,
-	"causa": "Bad Request",
-	"mensagem": "Houveram um ou mais erros de validação",
-	"path": "/api/v1/usuarios",
-	"timestamp": "2021-12-24T01:43:34.529720027",
-	"erros": {
-		"nome_completo": [
-			"não deve estar vazio",
-			"não deve ser nulo"
-		],
-		"username": [
-			"username já cadastrado"
-		]
-	}
+  "status": 400,
+  "causa": "Bad Request",
+  "mensagem": "Houveram um ou mais erros de validação",
+  "path": "/api/v1/usuarios",
+  "timestamp": "2021-12-24T01:43:34.529720027",
+  "erros": {
+    "nome_completo": [
+      "não deve estar vazio",
+      "não deve ser nulo"
+    ],
+    "username": [
+      "username já cadastrado"
+    ]
+  }
 }
 ```
 
@@ -161,8 +161,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGV5c29ucGgiLCJleHAiOjE2N
 Accept: */*
 
 {
-	"nome_completo": "Cleyson Lima",
-	"username": "cleysonph",
+  "nome_completo": "Cleyson Lima",
+  "username": "cleysonph",
 }
 ```
 
@@ -175,11 +175,11 @@ HTTP/1.1 201
 Content-Type: application/json
 
 {
-	"id": 1,
-	"nome_completo": "Cleyson Lima",
-	"username": "cleysonph",
-	"criado_em": "2021-12-24T01:41:36.556174143",
-	"atualizado_em": "2021-12-24T01:41:36.556174143",
+  "id": 1,
+  "nome_completo": "Cleyson Lima",
+  "username": "cleysonph",
+  "criado_em": "2021-12-24T01:41:36.556174143",
+  "atualizado_em": "2021-12-24T01:41:36.556174143",
 }
 
 ```
@@ -191,20 +191,20 @@ HTTP/1.1 400
 Content-Type: application/json
 
 {
-	"status": 400,
-	"causa": "Bad Request",
-	"mensagem": "Houveram um ou mais erros de validação",
-	"path": "/api/v1/usuarios",
-	"timestamp": "2021-12-24T01:43:34.529720027",
-	"erros": {
-		"nome_completo": [
-			"não deve estar vazio",
-			"não deve ser nulo"
-		],
-		"username": [
-			"username já cadastrado"
-		]
-	}
+  "status": 400,
+  "causa": "Bad Request",
+  "mensagem": "Houveram um ou mais erros de validação",
+  "path": "/api/v1/usuarios",
+  "timestamp": "2021-12-24T01:43:34.529720027",
+  "erros": {
+    "nome_completo": [
+      "não deve estar vazio",
+      "não deve ser nulo"
+    ],
+    "username": [
+      "username já cadastrado"
+    ]
+  }
 }
 ```
 
@@ -215,12 +215,12 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-	"status": 401,
-	"causa": "Unauthorized",
-	"mensagem": "Full authentication is required to access this resource",
-	"path": "/api/v1/contas",
-	"timestamp": "2021-12-24T02:05:13.550486877",
-	"erros": null
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "Full authentication is required to access this resource",
+  "path": "/api/v1/contas",
+  "timestamp": "2021-12-24T02:05:13.550486877",
+  "erros": null
 }
 ```
 
@@ -230,12 +230,12 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-	"status": 401,
-	"causa": "Unauthorized",
-	"mensagem": "JWT expired at 2021-12-24T02:04:50Z. Current time: 2021-12-24T02:06:39Z, a difference of 109143 milliseconds.  Allowed clock skew: 0 milliseconds.",
-	"path": "/api/v1/contas",
-	"timestamp": "2021-12-24T02:06:39.144015887",
-	"erros": null
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "JWT expired at 2021-12-24T02:04:50Z. Current time: 2021-12-24T02:06:39Z, a difference of 109143 milliseconds.  Allowed clock skew: 0 milliseconds.",
+  "path": "/api/v1/contas",
+  "timestamp": "2021-12-24T02:06:39.144015887",
+  "erros": null
 }
 ```
 
@@ -296,9 +296,9 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGV5c29ucGgiLCJleHAiOjE2N
 Accept: */*
 
 {
-	"senha_atual": "senha@123",
-	"nova_senha": "senha@1234",
-	"confirmacao_nova_senha": "senha@123"
+  "senha_atual": "senha@123",
+  "nova_senha": "senha@1234",
+  "confirmacao_nova_senha": "senha@123"
 }
 ```
 
@@ -311,7 +311,7 @@ HTTP/1.1 201
 Content-Type: application/json
 
 {
-	"mensagem": "senha atualizada com sucesso"
+  "mensagem": "senha atualizada com sucesso"
 }
 
 ```
@@ -323,19 +323,19 @@ HTTP/1.1 400
 Content-Type: application/json
 
 {
-	"status": 400,
-	"causa": "Bad Request",
-	"mensagem": "Houveram um ou mais erros de validação",
-	"path": "/api/v1/usuarios",
-	"timestamp": "2021-12-24T01:43:34.529720027",
-	"erros": {
-		"senha": [
-			"a senha informada está incorreta"
-		],
-		"confirmacao_nova_senha": [
-			"senha de confirmação diferente da senha informada"
-		]
-	}
+  "status": 400,
+  "causa": "Bad Request",
+  "mensagem": "Houveram um ou mais erros de validação",
+  "path": "/api/v1/usuarios",
+  "timestamp": "2021-12-24T01:43:34.529720027",
+  "erros": {
+    "senha": [
+      "a senha informada está incorreta"
+    ],
+    "confirmacao_nova_senha": [
+      "senha de confirmação diferente da senha informada"
+    ]
+  }
 }
 ```
 
@@ -346,12 +346,12 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-	"status": 401,
-	"causa": "Unauthorized",
-	"mensagem": "Full authentication is required to access this resource",
-	"path": "/api/v1/contas",
-	"timestamp": "2021-12-24T02:05:13.550486877",
-	"erros": null
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "Full authentication is required to access this resource",
+  "path": "/api/v1/contas",
+  "timestamp": "2021-12-24T02:05:13.550486877",
+  "erros": null
 }
 ```
 
@@ -361,11 +361,11 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-	"status": 401,
-	"causa": "Unauthorized",
-	"mensagem": "JWT expired at 2021-12-24T02:04:50Z. Current time: 2021-12-24T02:06:39Z, a difference of 109143 milliseconds.  Allowed clock skew: 0 milliseconds.",
-	"path": "/api/v1/contas",
-	"timestamp": "2021-12-24T02:06:39.144015887",
-	"erros": null
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "JWT expired at 2021-12-24T02:04:50Z. Current time: 2021-12-24T02:06:39Z, a difference of 109143 milliseconds.  Allowed clock skew: 0 milliseconds.",
+  "path": "/api/v1/contas",
+  "timestamp": "2021-12-24T02:06:39.144015887",
+  "erros": null
 }
 ```
