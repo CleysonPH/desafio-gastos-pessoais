@@ -1,0 +1,33 @@
+@startuml CON03
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Solicita a exibição dos detalhes de uma conta
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Verifica se a conta solicita existe
+  group Conta não existe
+    Sistema -> Usuário: Exbie um erro informando que a conta solicitada não existe
+  end
+
+  group Conta existente
+    Sistema -> Sistema: Verifica se o usuário logado é o dono da conta
+
+    group Usuário logado é dono da conta
+      Sistema -> Usuário: Exibe os detalhes da conta solicitada
+    end
+
+    group Usuário logado não é dono da conta
+      Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da conta
+    end
+  end
+end
+
+@enduml
