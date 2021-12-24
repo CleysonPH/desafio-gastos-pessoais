@@ -100,11 +100,11 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-	"status": 401,
-	"causa": "Unauthorized",
-	"mensagem": "Full authentication is required to access this resource",
-	"path": "/api/v1/contas",
-	"timestamp": "2021-12-24T18:48:12.568403848",
-	"erros": null
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "Full authentication is required to access this resource",
+  "path": "/api/v1/contas",
+  "timestamp": "2021-12-24T18:48:12.568403848",
+  "erros": null
 }
 ```
