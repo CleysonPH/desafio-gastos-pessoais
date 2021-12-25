@@ -613,3 +613,127 @@ Content-Type: application/json
   "erros": null
 }
 ```
+
+## CON07 - Listar transações da conta
+
+### Précondição
+Usuário deve estar logado
+
+### Ator
+Usuário
+
+### Fluxo de eventos
+
+![Fluxo do caso CON07](./out/casos-de-uso/conta/CON07/CON07.svg)
+
+### Dados da requisição
+Não se aplica
+
+### Regras de validação
+Não se aplica
+
+### Dados da Resposta
+
+Lista das transações associadas a conta solicitada
+
+Dados de uma transação:
+| Campo         | Tipo   | Exemplo                       |
+|---------------|--------|-------------------------------|
+| id            | number | 1                             |
+| nome          | string | TreinaWeb                     |
+| tipo          | string | SAIDA                         |
+| descricao     | string | Assinatura anual da TreinaWeb |
+| data          | string | 2021-12-20                    |
+| valor         | number | 804.00                        |
+| criado_em     | string | 2021-12-24T01:41:36.556174143 |
+| atualizado_em | string | 2021-12-24T01:41:36.556174143 |
+
+### Exemplo da requisição
+
+```
+GET /api/v1/contas/1/transacoes HTTP/1.1
+Host: localhost:8080
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGV5c29ucGgiLCJleHAiOjE2NDAzODI1NTUsImlhdCI6MTY0MDM4MjUyNX0.nbv6jkRJkbVdC-YQLvgP5gjENJIX2EZ-tHt9uELiiRe3ivkS5w-C_smbSyKcTRm9jtBEXGxTl0-tfKyVIKBHJQ
+Accept: */*
+```
+
+### Exemplos de resposta
+
+**Usuário autenticado**
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "nome": "Sálario",
+    "tipo": "ENTRADA",
+    "descricao": "Sálario mensal",
+    "data": "2021-12-05",
+    "valor": 5000.00,
+    "criadoEm": "2021-12-21T15:14:34.367856",
+    "atualizadoEm": "2021-12-21T15:14:34.367856",
+  },
+  {
+    "id": 2,
+    "nome": "TreinaWeb",
+    "tipo": "SAIDA",
+    "descricao": "Assinatura anual da TreinaWeb",
+    "data": "2021-12-20",
+    "valor": 804.00,
+    "criadoEm": "2021-12-21T15:14:34.367856",
+    "atualizadoEm": "2021-12-21T15:14:34.367856",
+  }
+]
+
+```
+
+**Usuário não autenticado**
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "Full authentication is required to access this resource",
+  "path": "/api/v1/contas/1/transacoes",
+  "timestamp": "2021-12-24T18:48:12.568403848",
+  "erros": null
+}
+```
+
+**Usuário não é dono da conta**
+
+```
+HTTP/1.1 403
+Content-Type: application/json
+
+{
+  "status": 403,
+  "causa": "Forbidden",
+  "mensagem": "Usuário logado não é dono da conta",
+  "path": "/api/v1/contas/1/transacoes",
+  "timestamp": "2021-12-24T19:11:32.627959138",
+  "erros": null
+}
+```
+
+**Conta não existente**
+
+```
+HTTP/1.1 404
+Content-Type: application/json
+
+{
+  "status": 404,
+  "causa": "Not Found",
+  "mensagem": "Conta não encontrada",
+  "path": "/api/v1/contas/1/transacoes",
+  "timestamp": "2021-12-24T19:13:24.097714655",
+  "erros": null
+}
+```
