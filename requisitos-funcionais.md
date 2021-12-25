@@ -1,5 +1,7 @@
 # Requisitos Funcionais
 
+## Usuário
+
 - **USU01 - Cadastro:** O usuário poderá se cadastrar no sistema. O sistema deve permitir que o usuário entre com os seus dados pessoais.
 
 - **USU02 - Alteração de dados pessoais:** O sistema deve permitir que o usuário possa alterar seus dados pessoais.
@@ -9,6 +11,8 @@
 - **USU04 - Autenticação:** O sistema deve permitir que os usuário possam realizar login a partir de suas credenciais, e-mail e senha. Após o processo de autenticação ser realizado com sucesso o sistema deve disponibilizar um token de acesso.
 
 - **USU05 - Reautenticação:** O sistema deve permitir que os usuário obtenham um novo token de acesso sem a necessidade do usuário enviar novamente suas credenciais. Usuário irá enviar o seu token de reautenticação atual e então o sistema irá gerar um novo token de acesso.
+
+## Conta
 
 - **CON01 - Cadastrar conta:** O usuário poderá cadastrar novas contas, no momento do cadastro o usuário proverá as informações da conta e então o sistema irá realizar o seu cadastro e então associar a conta cadastrada ao usuário que fez o seu cadastro.
 
@@ -23,6 +27,8 @@
 - **CON06 - Calcular saldo:** O usuário poderá verificar o saldo de uma conta. O sistema deve realizar este calculo com base em todas as transações associadas com a conta em questão.
 
 - **CON07 - Listar transações da conta:** O usuário poderá listar todas as transações associadas com a conta em questão;
+
+## Transação
 
 - **TRA01 - Cadastrar transação:** O usuário poderá cadastrar uma nova transação, no momento do cadastro o usuário deverá informar para qual conta a transação será associada e qual o tipo da mesma, se é uma transação de entrada ou de saida.
 
