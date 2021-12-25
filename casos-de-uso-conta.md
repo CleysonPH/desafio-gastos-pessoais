@@ -520,3 +520,96 @@ Content-Type: application/json
   "erros": null
 }
 ```
+
+## CON06 - Calcular saldo
+
+### Précondição
+Usuário deve estar logado
+
+### Ator
+Usuário
+
+### Fluxo de eventos
+
+![Fluxo do caso CON06](./out/casos-de-uso/conta/CON06/CON06.svg)
+
+### Dados da requisição
+Não se aplica
+
+### Regras de validação
+Não se aplica
+
+### Dados da Resposta
+| Campo | Tipo   | Exemplo |
+|-------|--------|---------|
+| saldo | number | 100.50  |
+
+### Exemplo da requisição
+
+```
+GET /api/v1/contas/1/saldo HTTP/1.1
+Host: localhost:8080
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjbGV5c29ucGgiLCJleHAiOjE2NDAzODI1NTUsImlhdCI6MTY0MDM4MjUyNX0.nbv6jkRJkbVdC-YQLvgP5gjENJIX2EZ-tHt9uELiiRe3ivkS5w-C_smbSyKcTRm9jtBEXGxTl0-tfKyVIKBHJQ
+Accept: */*
+```
+
+### Exemplos de resposta
+
+**Usuário dono da conta**
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "saldo": 100.50
+}
+```
+
+**Usuário não autenticado**
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "status": 401,
+  "causa": "Unauthorized",
+  "mensagem": "Full authentication is required to access this resource",
+  "path": "/api/v1/contas/1/saldo",
+  "timestamp": "2021-12-24T18:48:12.568403848",
+  "erros": null
+}
+```
+
+**Usuário não é dono da conta**
+
+```
+HTTP/1.1 403
+Content-Type: application/json
+
+{
+  "status": 403,
+  "causa": "Forbidden",
+  "mensagem": "Usuário logado não é dono da conta",
+  "path": "/api/v1/contas/1/saldo",
+  "timestamp": "2021-12-24T19:11:32.627959138",
+  "erros": null
+}
+```
+
+**Conta não existente**
+
+```
+HTTP/1.1 404
+Content-Type: application/json
+
+{
+  "status": 404,
+  "causa": "Not Found",
+  "mensagem": "Conta não encontrada",
+  "path": "/api/v1/contas/1/saldo",
+  "timestamp": "2021-12-24T19:13:24.097714655",
+  "erros": null
+}
+```
