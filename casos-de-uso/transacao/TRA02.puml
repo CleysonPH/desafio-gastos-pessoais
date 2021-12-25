@@ -1,0 +1,19 @@
+@startuml TRA02
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Solicita a listagem das transações
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Realiza a busca das transações do usuário logado
+  Sistema -> Usuário: Exibe as transações dos usuário logado
+end
+
+@enduml
