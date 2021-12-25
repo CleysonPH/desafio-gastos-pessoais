@@ -14,7 +14,7 @@ end
 group Usuário está autenticado
   Sistema -> Sistema: Verifica se a conta solicita existe
   group Conta não existe
-    Sistema -> Usuário: Exbie um erro informando que a conta solicitada não existe
+    Sistema -> Usuário: Exibe um erro informando que a conta solicitada não existe
   end
 
   group Conta existente
@@ -22,7 +22,7 @@ group Usuário está autenticado
 
     group Usuário logado é dono da conta
       Sistema -> Sistema: Realiza a exclusão da conta e de suas transações associadas
-      Sistema -> Usuário: Exbibe uma mensagem informando que a conta foi excluida
+      Sistema -> Usuário: Exibe uma mensagem informando que a conta foi excluida
     end
 
     group Usuário logado não é dono da conta
