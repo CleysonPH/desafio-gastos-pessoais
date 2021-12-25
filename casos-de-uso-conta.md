@@ -67,8 +67,8 @@ Content-Type: application/json
   "id": 1,
   "nome": "Nubank",
   "descricao": "Conta do banco Nubank",
-  "criadoEm": "2021-12-21T15:14:06.413402655",
-  "atualizadoEm": "2021-12-21T15:14:06.413402655",
+  "criado_em": "2021-12-21T15:14:06.413402655",
+  "atualizado_em": "2021-12-21T15:14:06.413402655",
 }
 
 ```
@@ -162,15 +162,15 @@ Content-Type: application/json
     "id": 1,
     "nome": "Nubank",
     "descricao": "Conta do banco Nubank",
-    "criadoEm": "2021-12-21T15:14:06.413402655",
-    "atualizadoEm": "2021-12-21T15:14:06.413402655",
+    "criado_em": "2021-12-21T15:14:06.413402655",
+    "atualizado_em": "2021-12-21T15:14:06.413402655",
   },
   {
     "id": 2,
     "nome": "Santander",
     "descricao": "Conta do banco Santander",
-    "criadoEm": "2021-12-22T15:14:06.413402655",
-    "atualizadoEm": "2021-12-22T15:14:06.413402655",
+    "criado_em": "2021-12-22T15:14:06.413402655",
+    "atualizado_em": "2021-12-22T15:14:06.413402655",
   }
 ]
 
@@ -242,8 +242,8 @@ Content-Type: application/json
   "id": 1,
   "nome": "Nubank",
   "descricao": "Conta do banco Nubank",
-  "criadoEm": "2021-12-21T15:14:06.413402655",
-  "atualizadoEm": "2021-12-21T15:14:06.413402655",
+  "criado_em": "2021-12-21T15:14:06.413402655",
+  "atualizado_em": "2021-12-21T15:14:06.413402655",
 }
 ```
 
@@ -361,8 +361,8 @@ Content-Type: application/json
   "id": 1,
   "nome": "Nubank",
   "descricao": "Conta do banco Nubank",
-  "criadoEm": "2021-12-21T15:14:06.413402655",
-  "atualizadoEm": "2021-12-21T15:14:06.413402655",
+  "criado_em": "2021-12-21T15:14:06.413402655",
+  "atualizado_em": "2021-12-21T15:14:06.413402655",
 }
 ```
 
@@ -645,6 +645,7 @@ Dados de uma transação:
 | descricao     | string | Assinatura anual da TreinaWeb |
 | data          | string | 2021-12-20                    |
 | valor         | number | 804.00                        |
+| conta         | number | 1                             |
 | criado_em     | string | 2021-12-24T01:41:36.556174143 |
 | atualizado_em | string | 2021-12-24T01:41:36.556174143 |
 
@@ -673,8 +674,9 @@ Content-Type: application/json
     "descricao": "Sálario mensal",
     "data": "2021-12-05",
     "valor": 5000.00,
-    "criadoEm": "2021-12-21T15:14:34.367856",
-    "atualizadoEm": "2021-12-21T15:14:34.367856",
+    "conta": 1,
+    "criado_em": "2021-12-21T15:14:34.367856",
+    "atualizado_em": "2021-12-21T15:14:34.367856",
   },
   {
     "id": 2,
@@ -683,8 +685,9 @@ Content-Type: application/json
     "descricao": "Assinatura anual da TreinaWeb",
     "data": "2021-12-20",
     "valor": 804.00,
-    "criadoEm": "2021-12-21T15:14:34.367856",
-    "atualizadoEm": "2021-12-21T15:14:34.367856",
+    "conta": 1,
+    "criado_em": "2021-12-21T15:14:34.367856",
+    "atualizado_em": "2021-12-21T15:14:34.367856",
   }
 ]
 

@@ -1,0 +1,34 @@
+@startuml TRA01
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para cadastro da transação
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Verifica se o usuário logado é dono da conta para qual está cadastrando a transação
+
+  group Usuário logado é dono da conta
+    Sistema -> Sistema: Realiza a validação dos dados enviados
+    group Dados válidos
+      Sistema -> Sistema: Realiza o cadastro da transação
+      Sistema --> Usuário: Retorna os dados cadastrados
+    end
+
+    group Dados inválidos
+      Sistema --> Usuário: Exibe a lista de erros de validação
+    end
+  end
+
+  group Usuário logado não é dono da conta
+    Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da conta para qual quer cadastrar a transação
+  end
+end
+
+@enduml
