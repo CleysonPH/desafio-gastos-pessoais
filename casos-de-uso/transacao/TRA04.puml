@@ -1,0 +1,51 @@
+@startuml TRA04
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Envia os dados para atualização da transação
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Verifica se a transação solicitada existe
+
+  group Transação não existe
+    Sistema -> Usuário: Exibe um erro informando que a transação solicitada não existe
+  end
+
+  group Transação existente
+    Sistema -> Sistema: Verifica se o usuário logado é o dono da transação
+
+    group Usuário logado não é dono da transação
+      Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da transação
+    end
+
+    group Usuário logado é dono da transação
+      Sistema -> Sistema: Verifica se o usuário logado é dono da conta para qual está atualizando a transação
+
+      group Usuário logado não é dono da conta
+        Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da conta para qual quer atualizar a transação
+      end
+
+      group Usuário logado é dono da conta
+        Sistema -> Sistema: Realiza a validação dos dados enviados
+
+        group Dados inválidos
+          Sistema --> Usuário: Exibe a lista de erros de validação
+        end
+
+        group Dados válidos
+          Sistema -> Sistema: Realiza a atualização da transação
+          Sistema --> Usuário: Retorna os dados atualizados
+        end
+      end
+    end
+  end
+end
+
+@enduml
