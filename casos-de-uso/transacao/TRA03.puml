@@ -1,0 +1,33 @@
+@startuml TRA03
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Solicita a exibição dos detalhes de uma transação
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Verifica se a transação solicita existe
+  group Transação não existe
+    Sistema -> Usuário: Exibe um erro informando que a transação solicitada não existe
+  end
+
+  group Transação existente
+    Sistema -> Sistema: Verifica se o usuário logado é o dono da transação
+
+    group Usuário logado é dono da transação
+      Sistema -> Usuário: Exibe os detalhes da transação solicitada
+    end
+
+    group Usuário logado não é dono da transação
+      Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da transação
+    end
+  end
+end
+
+@enduml
