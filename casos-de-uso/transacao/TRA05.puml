@@ -1,0 +1,34 @@
+@startuml TRA05
+
+actor Usuário
+participant Sistema
+
+Usuário -> Sistema: Solicita a exclusão de uma transação
+
+Sistema -> Sistema: Verifica se o usuário está autenticado
+
+group Usuário não está autenticado
+  Sistema -> Usuário: Exibe um erro informando que o usuário precisa estar autenticado
+end
+
+group Usuário está autenticado
+  Sistema -> Sistema: Verifica se a transação solicita existe
+  group Transação não existe
+    Sistema -> Usuário: Exibe um erro informando que a transação solicitada não existe
+  end
+
+  group Transação existente
+    Sistema -> Sistema: Verifica se o usuário logado é o dono da transação
+
+    group Usuário logado não é dono da transação
+      Sistema -> Usuário: Exibe um erro informando que o usuário logado não é dono da transação
+    end
+
+    group Usuário logado é dono da transação
+      Sistema -> Sistema: Realiza a exclusão da transação
+      Sistema -> Usuário: Exibe uma mensagem informando que a transação foi excluida
+    end
+  end
+end
+
+@enduml
