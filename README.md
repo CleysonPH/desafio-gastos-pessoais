@@ -16,6 +16,7 @@
 
 - [Descrição](#descrição)
 - [Rotas](#rotas)
+- [Diagrama Banco de Dados](#diagrama-banco-de-dados)
 - [Requisitos](#requisitos)
 - [Casos de Uso](#casos-de-uso)
 
@@ -46,7 +47,7 @@ Seu desafio é criar uma API para realizar o gerenciamento de gastos pessoais.
 | /api/v1/transacoes/{transacaoId}    | PUT        | Sim                     | Rota responsável por editar os dados de uma transação                             |
 | /api/v1/transacoes/{transacaoId}    | DELETE     | Sim                     | Rota responsável por excluir uma transação                                        |
 
-## Diagram Banco de Dados
+## Diagrama Banco de Dados
 
 A aplicação terá três tabelas que irão se relacionar entre si, sendo elas a tabela `usuario`, a tabela `conta` e a tabela `transacao`.
 
