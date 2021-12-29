@@ -51,7 +51,7 @@ Seu desafio é criar uma API para realizar o gerenciamento de gastos pessoais.
 
 A aplicação terá três tabelas que irão se relacionar entre si, sendo elas a tabela `usuario`, a tabela `conta` e a tabela `transacao`.
 
-![Diagrama banco de dados](./db-diagram/db-diagram.svg)
+![Diagrama banco de dados](./db-diagram/db-diagram.png)
 
 ## Requisitos
 
